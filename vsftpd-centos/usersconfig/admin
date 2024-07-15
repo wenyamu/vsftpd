@@ -1,0 +1,20 @@
+# 此配置文件针对虚拟用户的个性配置，修改后用户重新登陆即可生效，不需要重启vsftpd服务
+# 指定虚拟用户的虚拟目录（虚拟用户登录后的主目录,即登录ftp后访问的根目录）
+local_root=/home/vsftpd/admin
+# 允许写入
+write_enable=YES
+# 允许浏览FTP目录和下载
+anon_world_readable_only=NO
+# 禁止用户下载
+#download_enable=NO
+# 允许虚拟用户上传文件
+anon_upload_enable=YES
+# 允许虚拟用户创建目录
+anon_mkdir_write_enable=YES
+# 允许虚拟用户执行其他操作（如改名、删除）
+anon_other_write_enable=YES
+# 上传文件的掩码,如022时，上传目录权限为755,文件权限为644
+anon_umask=022
+
+# 限制最高传输速度，单位为Bytes/s。如果为0表示不限制
+anon_max_rate=204800
